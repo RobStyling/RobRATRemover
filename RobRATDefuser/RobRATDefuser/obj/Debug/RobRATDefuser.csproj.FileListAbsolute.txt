@@ -1,0 +1,6 @@
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\RobRATDefuser.exe.config
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\RobRATDefuser.exe
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\RobRATDefuser.pdb
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.exe
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.pdb
