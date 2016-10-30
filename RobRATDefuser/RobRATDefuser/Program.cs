@@ -53,6 +53,7 @@ namespace RobRATDefuser
                 Log("Removed the Startup Key!", "DELETE");
                 RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
                 objRegistryKey.DeleteValue("DisableTaskMgr");
+                objRegistryKey.DeleteValue("DisableRegistryTools");
                 objRegistryKey.Close();
                 Log("Removed the Disabled Task Manager Key!", "DELETE");
                 Log("Removed everything!", "DELETE SUCCESFUL");
