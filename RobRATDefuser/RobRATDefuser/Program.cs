@@ -61,14 +61,14 @@ namespace RobRATDefuser
 				}
 				Log("Trying to Delete File", "DELETE");
 				try{
-				File.Delete("C:\\Windows\\SysWOW64\\logonassistant.exe");
+					File.Delete(System.Environment.GetFolderPath(Environment.SpecialFolder.System) + "\\logonassistant.exe");
 				}
 				catch{
 					Log("Failed to Delete File!", "ERROR");
 					System.Windows.Forms.MessageBox.Show("Warning could not Delete the File you must Delete it Manualy!!", "Warning!");
 					System.Diagnostics.Process Explorer = new System.Diagnostics.Process();
                     Explorer.StartInfo.FileName = "explorer.exe";
-                    Explorer.StartInfo.Arguments = "C:\\Windows\\SysWOW64";
+                    Explorer.StartInfo.Arguments = System.Environment.GetFolderPath(Environment.SpecialFolder.System);
                     Explorer.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
                     Explorer.Start();
                     System.Windows.Forms.MessageBox.Show("Search and Delete only the File logonassistant.exe!!!!", "Warning!");
