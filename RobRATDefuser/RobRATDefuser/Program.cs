@@ -5,6 +5,8 @@ using Microsoft.Win32;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Diagnostics;
+using System.Threading;
 
 namespace RobRATDefuser
 {
@@ -47,6 +49,30 @@ namespace RobRATDefuser
 			Console.Write("Press any key to continue delting RobRAT...");
 			Console.ReadKey(true);
 			try{
+				try {
+					Log("Trying to Stop Process!", "ALWAYS");
+					foreach (Process proc in Process.GetProcessesByName("logonassistant")) {
+						proc.Kill();
+					}
+				} 
+				catch (Exception) {
+					Log("Failed to Stop Process!", "ERROR");
+					throw;
+				}
+				Log("Trying to Delete File", "DELETE");
+				try{
+				File.Delete("C:\\Windows\\SysWOW64\\logonassistant.exe");
+				}
+				catch{
+					Log("Failed to Delete File!", "ERROR");
+					System.Windows.Forms.MessageBox.Show("Warning could not Delete the File you must Delete it Manualy!!", "Warning!");
+					System.Diagnostics.Process Explorer = new System.Diagnostics.Process();
+                    Explorer.StartInfo.FileName = "explorer.exe";
+                    Explorer.StartInfo.Arguments = "C:\\Windows\\SysWOW64";
+                    Explorer.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
+                    Explorer.Start();
+                    System.Windows.Forms.MessageBox.Show("Search and Delete only the File logonassistant.exe!!!!", "Warning!");
+				}
 				RegistryKey k = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
 				k.DeleteValue("logonassist");
                 k.Close();
@@ -62,7 +88,7 @@ namespace RobRATDefuser
                 Console.WriteLine("Press any Key to continue!");
                 Console.ReadKey(true);
 			}
-			catch {
+			catch (Exception) {
 				Log("Cant Delete The The RAT!", "DELETE FAILED!");
 				Console.WriteLine("Cant Delete the RAT!");
 				Console.WriteLine("Press any Key to continue!");
