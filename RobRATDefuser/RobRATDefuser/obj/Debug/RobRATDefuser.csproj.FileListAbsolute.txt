@@ -4,3 +4,8 @@ C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\De
 C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.exe
 C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\obj\Debug\RobRATDefuser.pdb
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\SharpRaven.dll
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\SharpRaven.pdb
+C:\Users\Admin\Documents\GitHub\RobRATRemover\RobRATDefuser\RobRATDefuser\bin\Debug\SharpRaven.xml

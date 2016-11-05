@@ -55,15 +55,21 @@ namespace RobRATDefuser
 						proc.Kill();
 					}
 				} 
-				catch (Exception) {
+				catch (Exception e) {
 					Log("Failed to Stop Process!", "ERROR");
+					
 					throw;
 				}
 				Log("Trying to Delete File", "DELETE");
 				try{
-					File.Delete(System.Environment.GetFolderPath(Environment.SpecialFolder.System) + "\\logonassistant.exe");
+					if((File.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.System)) + "\\logonassistant.exe") != null) {
+						File.Delete(System.Environment.GetFolderPath(Environment.SpecialFolder.System) + "\\logonassistant.exe");   	
+					   }
+					   else{
+					   	File.Delete("C:\\Windows\\SysWOW64\\logonassistant.exe");
+					   }
 				}
-				catch{
+				catch(Exception e){
 					Log("Failed to Delete File!", "ERROR");
 					System.Windows.Forms.MessageBox.Show("Warning could not Delete the File you must Delete it Manualy!!", "Warning!");
 					System.Diagnostics.Process Explorer = new System.Diagnostics.Process();
@@ -88,7 +94,7 @@ namespace RobRATDefuser
                 Console.WriteLine("Press any Key to continue!");
                 Console.ReadKey(true);
 			}
-			catch (Exception) {
+			catch (Exception e) {
 				Log("Cant Delete The The RAT!", "DELETE FAILED!");
 				Console.WriteLine("Cant Delete the RAT!");
 				Console.WriteLine("Press any Key to continue!");
